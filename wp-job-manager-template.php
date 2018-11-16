@@ -1050,10 +1050,6 @@ function get_the_company_website( $post = null ) {
 function the_company_tagline( $before = '', $after = '', $echo = true, $post = null ) {
 	$company_tagline = get_the_company_tagline( $post );
 
-	if ( 0 === strlen( $company_tagline ) ) {
-		return;
-	}
-
 	$company_tagline = esc_attr( wp_strip_all_tags( $company_tagline ) );
 	$company_tagline = $before . $company_tagline . $after;
 
